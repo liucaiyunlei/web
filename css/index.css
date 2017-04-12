@@ -1,0 +1,624 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.row {
+    width: 103%;
+    float: left;
+    margin: 110px -1.5%;
+}
+
+.lr {
+    position: absolute;
+    right: 0;
+    /* top: -41px; */
+    left: auto;
+}
+
+.resume {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    border: none;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0);
+    transition: 1s all ease;
+}
+
+.navbar.blue {
+    background: rgba(71, 166, 173, 1);
+}
+
+.navbar.black {
+    background: rgba(51, 51, 51, .7);
+}
+
+.resume .navbar-brand,
+.resume .navbar-brand:visited,
+.resume .navbar-brand:hover {
+    color: #A7E615;
+    font-size: 18px;
+}
+
+.resume .navbar-right li a,
+.resume .navbar-right li a:visited {
+    color: #ffffff;
+!important;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.resume .navbar-right li a:hover {
+    color: #cccccc;
+!important;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:visited,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #0F698A;
+    text-decoration: none;
+
+}
+
+.navbar-default .navbar-toggle {
+    background-color: #122b40;
+}
+
+.navbar-default .navbar-toggle:focus {
+    background-color: #122b40;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: #122b40;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: transparent;
+    border-bottom: 3px solid yellowgreen;
+}
+
+/*第一屏*/
+.first {
+    background: url("../images/bg_01.jpg");
+    overflow: hidden;
+}
+
+.photo {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.photo::before,
+.photo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid skyblue;
+    border-radius: 50%;
+    background: url(../images/me1.jpg);
+    /*transform: rotateY(90deg);*/
+}
+
+.photo::before {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.photo::after {
+    background: url(../images/musict.jpg);
+    transform-origin: left center;
+    transition: transform 1s;
+
+}
+
+.photo:hover::after {
+    transform: rotateY(-180deg);
+}
+
+/*= common css to all effects =*/
+.single-member {
+    width: 280px;
+    float: left;
+    margin: -50px 2.5%;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.member-image img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 10px 0 0;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 15px;
+    line-height: 22px;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0 30px;
+    margin-bottom: 10px;
+}
+
+.social-touch a {
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+    vertical-align: middle;
+    margin: 0 2px;
+    background-image: url(../images/social-icons.png);
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.social-touch a:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.fb-touch {
+    background-position: 0 0;
+}
+
+.tweet-touch {
+    background-position: -35px 0;
+}
+
+.linkedin-touch {
+    background-position: -71px 0;
+}
+
+.icon-colored .fb-touch {
+    background-position: 0 -27px;
+}
+
+.icon-colored .tweet-touch {
+    background-position: -35px -27px;
+}
+
+.icon-colored .linkedin-touch {
+    background-position: -71px -27px;
+}
+
+/*= common css to all effects end =*/
+
+/*= effect-1 css =*/
+/*= effect-5 css =*/
+.effect-5{max-height: 289px; min-height: 289px; overflow: hidden;}
+.effect-5 .member-info {background-color: #fff; position: absolute; width: 100%; top: 0; left: 0; height: 82px; transition: 0.3s; z-index: 2;}
+.effect-5 .member-image{margin-top: 82px; float: left; width: 100%; position: relative; transition: 0.3s; z-index: 4;}
+.effect-5 .member-image img{width: 100%;}
+.effect-5 .member-info:before{border-left: 140px solid transparent; border-right: 140px solid transparent; border-top: 15px solid #fff; bottom: -15px; content: ""; left: 0; position: absolute; z-index: 9;}
+.effect-5:hover .member-info{height: 215px; transition: 0.3s; z-index: 6;}
+.effect-5:hover .member-image{margin-top: 200px; transition: 0.3s;}
+/*= effect-5 css end =*/
+
+/*= effect-1 css end =*/
+
+/*= effect-2 css =*/
+.effect-2 {
+    max-height: 302px;
+    min-height: 302px;
+    overflow: hidden;
+}
+
+.effect-2 h3 {
+    padding-top: 7px;
+    line-height: 33px;
+}
+
+.effect-2 .member-image {
+    border-bottom: 5px solid #1fb554;
+    height: 212px;
+    overflow: hidden;
+    width: 100%;
+    transition: 0.4s;
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+
+.effect-2 .member-info {
+    transition: 0.4s;
+}
+
+.effect-2 .member-image img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.effect-2 .social-touch {
+    background-color: #1fb554;
+    float: left;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding: 5px 0;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.effect-2:hover .member-image {
+    height: 81px;
+    transition: 0.4s;
+}
+
+/*= effect-2 css end =*/
+
+/*= effect-3 css =*/
+.effect-3 {
+    max-height: 302px;
+    min-height: 302px;
+    overflow: hidden;
+}
+
+.effect-3 h3 {
+    padding-top: 7px;
+    line-height: 33px;
+}
+
+.effect-3 .member-image {
+    border-bottom: 5px solid #e5642b;
+    transition: 0.4s;
+    height: 212px;
+    width: 100%;
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
+
+.effect-3 .member-info {
+    transition: 0.4s;
+}
+
+.effect-3 .member-image img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.effect-3 .social-touch {
+    background-color: #e5642b;
+    float: left;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding: 5px 0;
+    width: 100%;
+    transition: 0.4s;
+}
+
+.effect-3:hover .member-image {
+    border-bottom: 0;
+    border-radius: 0 0 50px 50px;
+    height: 81px;
+    display: inline-block;
+    overflow: hidden;
+    width: 109px;
+    transition: 0.4s;
+}
+
+/*= effect-3 css end =*/
+
+/*动画*/
+
+/*第二屏*/
+.second {
+    background: url("../images/bg_02.jpg");
+    padding-top: 55px;
+    overflow: hidden;
+}
+
+.second .container {
+    position: relative;
+}
+
+.second .skills span {
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    color: #000000;
+    transform: scale(.5);
+}
+
+.subject-1 {
+    font-size: 48px;
+    margin-left: -400px;
+    margin-top: -50px;
+}
+
+.subject-2 {
+    font-size: 18px;
+    margin-left: -250px;
+    margin-top: 40px;
+}
+
+.subject-3 {
+    font-size: 14px;
+    margin-left: -270px;
+    margin-top: 10px;
+}
+
+.subject-4 {
+    font-size: 20px;
+    margin-left: -200px;
+    margin-top: -30px;
+}
+
+.subject-5 {
+    font-size: 20px;
+    margin-left: -120px;
+    margin-top: 50px;
+}
+
+.subject-6 {
+    font-size: 30px;
+    margin-left: 81px;
+    margin-top: -35px;
+}
+
+.subject-7 {
+    font-size: 16px;
+    margin-left: 0px;
+    margin-top: -40px;
+}
+
+.subject-8 {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.subject-9 {
+    font-size: 18px;
+    margin-left: 2px;
+    margin-top: 41px;
+}
+
+.subject-10 {
+    font-size: 18px;
+    margin-left: -150px;
+    margin-top: 10px;
+}
+
+.second.current .skills span {
+    animation: bounceIn 2s linear forwards;
+}
+
+.second .skill-introduce .media:nth-child(1) {
+    transform: translateX(-2000px);
+}
+
+.second .skill-introduce .media:nth-child(2) {
+    transform: translateX(2000px);
+}
+
+.second .skill-introduce .media:nth-child(3) {
+    transform: translateY(-2000px);
+
+}
+
+.second.current .skill-introduce .media:nth-child(1) {
+    transform: translateX(0);
+    transition: transform 1s;
+
+}
+
+.second.current .skill-introduce .media:nth-child(2) {
+    transform: translateX(0);
+    transition: transform 1s .5s;
+
+}
+
+.second.current .skill-introduce .media:nth-child(3) {
+    transform: translateY(0);
+    transition: transform 1s 1s;
+
+}
+
+/*第三屏*/
+.third {
+    background: url("../images/bg_03.jpg");
+
+}
+
+.fourth {
+    padding-top: 55px;
+    overflow: hidden;
+    background: url("../images/bg_04.jpg");
+
+}
+
+.fourth .container {
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+#exp_left {
+    float: left;
+    margin-top: 20px;
+
+}
+
+#exp_left p {
+
+    margin: auto;
+
+    padding-left: 20px;
+    font-family: "Microsoft YaHei";
+    font-size: 30px;
+    color: #000;
+    border: 3px solid skyblue;
+    border-radius: 25px;
+    line-height: 40px;
+    /*opacity: 0;*/
+
+}
+
+#exp_left p:nth-child(1) {
+    position: absolute;
+    left: 0;
+    width: 400px;
+    transform: translate(-1000px, 0px);
+}
+
+#exp_left img {
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    transform: translate(600px, 1000px);
+
+}
+
+#exp_left p:nth-child(2) {
+    width: 300px;
+    transform: translate(2000px, 0px);
+}
+
+/*.container .right*/
+.container .right {
+    width: 500px;
+    float: right;
+    /*background: #000;*/
+    position: absolute;
+    right: 0;
+    border: 1px solid #cccccc;
+    /*transform: rotateY(45deg);*/
+}
+
+.information {
+    width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.information span {
+    display: block;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    line-height: 25px;
+    color: #000;
+}
+
+.information span[class='green'] {
+    color: #40C689;
+}
+
+/*动画*/
+
+.fourth.current #exp_left p:nth-child(1) {
+    opacity: .7;
+    transform: translate(100px, 0px);
+    transition: opacity 1s, transform 1s;
+}
+
+.fourth.current #exp_left img {
+    transform: translate(30px, 0px);
+    transition: transform 1s;
+}
+
+.fourth.current #exp_left p:nth-child(2) {
+    opacity: .7;
+    transform: translate(100px, 300px);
+    transition: opacity 1s, transform 1s .5s;
+}
+ .fourth.current .right{
+     transform: rotate(15deg);
+     transform-origin: top left;
+     transition: translate 1s;
+ }
+
+/**/
+.fifth {
+    background: url("../images/bg_05.jpg");
+    padding-top: 55px;
+    position: relative;
+}
+.fifth img{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+}
+.content{
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+.content p{
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    color: #333;
+    font-weight: normal;
+    padding-left: 100px;
+}
+.content span{
+    font-size: 50px;
+    color: #C5A968;
+    margin-right: 50px;
+
+}
+.fifth .content p:nth-child(1){
+    transform: translateX(-2000px);
+}
+.fifth .content p:nth-child(2) {
+    transform: translateX(2000px);
+}
+.fifth .content p:nth-child(3) {
+    transform: translateY(2000px);
+}
+.fifth.current .content p:nth-child(1){
+    transform: translateX(0);
+    transition: transform 1s;
+}
+.fifth.current .content p:nth-child(2) {
+    transform: translateX(0);
+    transition: transform 1s;
+}
+.fifth.current .content p:nth-child(3) {
+    transform: translateY(0);
+    transition: transform 1s;
+}
+
+
+
+
